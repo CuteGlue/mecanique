@@ -1,0 +1,511 @@
+%% ceci est un commentaire 
+%% il faut toujours commencer par \documentclass[type de papier, taille de texte]{sytle du document}
+\documentclass[a4paper,10pt]{report} %%%% sytle du document : report/book/article
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%% la suite est une collection des "package" ou des "librararies" pour utiliser des codes spécifiques
+
+%% il vous suffit de les copie-coller quand vous créez un nouveau document TeX (ou bien en ajouter plus si besoin).
+\usepackage[utf8]{inputenc} %% pour les accents en français
+\usepackage[frenchb]{babel} %% pour un format français
+\usepackage{graphicx} %% pour afficher des graphiques
+\usepackage{amsmath} %% pour écrire des symboles (maths), des équations, etc.
+\usepackage{amssymb}
+\usepackage{color}
+\usepackage{bm} %% pour lister des citations/la biblio
+\usepackage{hyperref} %% pour inserer des liens internet
+\usepackage{cleveref} %% pour faire des références uax équations, tableaux, etc.
+\usepackage{cite}
+\usepackage{float}
+%\usepackage{setspace} %% pour changer l'espace entre les lignes
+%\linespread{1.6} %% pour changer l'espace entre les lignes
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Default fixed font does not support bold face
+\DeclareFixedFont{\ttb}{T1}{txtt}{bx}{n}{8} % for bold
+\DeclareFixedFont{\ttm}{T1}{txtt}{m}{n}{8}  % for normal
+
+% Custom colors
+\usepackage{color}
+\definecolor{deepblue}{rgb}{0,0,0.5}
+\definecolor{deepred}{rgb}{0.6,0,0}
+\definecolor{deepgreen}{rgb}{0,0.5,0}
+
+\usepackage{listings}
+
+% Python style for highlighting
+\newcommand\pythonstyle{\lstset{
+language=Python,
+breaklines=true,
+basicstyle=\ttm,
+otherkeywords={self},             % Add keywords here
+keywordstyle=\ttb\color{deepblue},
+emph={MyClass,__init__},          % Custom highlighting
+emphstyle=\ttb\color{deepred},    % Custom highlighting style
+stringstyle=\color{deepgreen},
+frame=tb,                         % Any extra options here
+showstringspaces=false 
+           % 
+}}
+
+
+% Python environment
+\lstnewenvironment{python}[1][]
+{
+\pythonstyle
+\lstset{#1}
+}
+{}
+
+% Python for external files
+\newcommand\pythonexternal[2][]{{
+\pythonstyle
+\lstinputlisting[#1]{#2}}}
+
+% Python for inline
+\newcommand\pythoninline[1]{{\pythonstyle\lstinline!#1!}}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\title{\textbf{Vibrations d'une Disque}} %% choissez un titre approprié à votre sujet
+\author{par\\MAAMIR Mohamed\\ZHANG Xunjie\\MOHAMED Muhammad\\GOETZ Kim\\pour le DM de l'UE Introduction aux vibrations des structures M1} %% utilisez \\ pour une nouvelle ligne
+\date{fait le 08 janvier 2017} %% pour afficher la date actuelle commenter cette ligne
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%% TOUT ce qui va dans votre rapport doit être entre \begin{document} & \end{document}
+\begin{document}
+\selectlanguage{french} %% format français
+\maketitle %% pour afficher le titre
+\tableofcontents %% pour afficher/compiler le sommaire automatiquement
+\listoffigures %% pour lister les figures
+
+
+
+
+
+
+
+
+
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\chapter{Introduction} %% pour commencer un chapitre
+
+Nous avons étudié dans ce DM deux systèmes en vibrations libres Amorties. Après avoir définit le paramétrage de notre problème, nous avons étudié l'influence de l'amortissement et de la sollicitation initiale sur la réponse du système.
+Un modèle numérique basé sur nos études analytiques à été programmé et paramétré sur le logiciel Scilab.
+
+
+\chapter{Cas Symmétrie}
+\section{2 Degré de Liberté}
+\subsection{Théorie}
+On pose que le déplacement est en expression suivante :
+\begin{equation}
+v(x)=a_0+a_1\frac{x}{L}+a_2\frac{x^2}{L^2}+a_3\frac{x^3}{L^3} \ ,\  \Omega=[x_i,x_j]
+\end{equation}
+
+
+et rotation :
+\begin{equation}
+\theta(x)=a_1\frac{1}{L}+a_2\frac{2x}{L^2}+a_3\frac{3x^2}{L^3} \ ,\  \Omega=[x_i,x_j]
+\end{equation}
+
+On a déplacement et rotation sur $0$ et $\frac{L}{2}$ , ceque on note $v_i$ , $\theta_i$ , $v_j$ , $\theta_j$ \\
+\begin{itemize}
+    \item[$\bullet$]$v_i$ est déplacement d'une extrémité à $x$=$x_i$ qui est toujour nulle .
+    \item[$\bullet$]$\theta_i$ est la rotation d'une extrémité à $x$=$x_i$
+    \item[$\bullet$]$v_j$ est déplacement d'autre extrémité à $x$=$x_j$ .
+    \item[$\bullet$]$\theta_j$ est la rotation d'autre extrémité à $x$=$x_j$
+\end{itemize}
+
+
+Il y a 4 conditions  , donc on peut camculer la expression de $v(x)$:
+\[ 
+\left[ \begin{array}{c}v_i\\\\\theta_i\\\\v_j\\\\\theta_j\end{array} \right]
+=\left[ \begin{array}{cccc}
+1 & 0 & 0 & 0  \\\\
+0 & \frac{1}{L} & 0 & 0 \\\\
+1 & 1 &1 &1 \\\\
+0 & \frac{1}{L} &\frac{2}{L} &\frac{3}{L} 
+\end{array} \right]
+\left[ \begin{array}{c}a_0\\\\a_1\\\\a_2\\\\a_3\end{array} \right]
+\]
+
+Ensuite , on trouver le relation suivante :
+\[ 
+\left[ \begin{array}{c}a_0\\\\a_1\\\\a_2\\\\a_3\end{array} \right]
+=\left[ \begin{array}{cccc}
+1 & 0 & 0 & 0  \\\\
+0 & L & 0 & 0 \\\\
+-3 & -2L &3 &-L \\\\
+2 & L & -2 &L
+\end{array} \right]
+\left[ \begin{array}{c}v_i\\\\\theta_i\\\\v_j\\\\\theta_j\end{array} \right]
+\]
+
+et on reprend $v(x)$:
+
+\begin{equation}
+v(x)=v_j+L\theta_i\frac{x}{L}+(-3v_i-2L\theta_i+3v_j-L\theta_j)\frac{x^2}{L^2}+(2v_i+L\theta_i-2v_j+L\theta_j)\frac{x^3}{L^3}
+\end{equation}
+
+On noté $\xi=\frac{x}{L}$:
+\begin{center}
+$$v(x)=v_i+L\theta_i\xi+(-3v_i-2L\theta_i+3v_j-L\theta_j)\xi^2+(2v_i+L\theta_i-2v_j+L\theta_j)\xi^3 $$\\
+$$v(x)=(1-3\xi^2+2\xi^3)v_i+(\xi-2\xi^2+\xi^3)L\theta_i+(3\xi^2-2\xi^3)v_j+(-\xi^2+\xi^3)L\theta_j$$\\
+\end{center}
+
+
+on noté :
+\begin{center}
+$\phi_i=1-3\xi^2+2\xi^3$\\$\phi_j=3\xi^2-2\xi^3)$\\$\psi_i=(\xi-2\xi^2+\xi^3)L$\\$\psi_j=(-\xi^2+\xi^3)L$\\
+$$v(x)=\phi_iv_i+\phi_j\theta_i+\psi_iv_j+\psi_j\theta_j$$
+\end{center}
+
+
+
+
+
+\subsection{matrice de masse}
+On cherche la matrice de la masse  par $v(x)$ :
+\begin{center}
+$$E_c=\frac{1}{2}\int_{x_i}^{x_j}\rho S\dot{v}^2dx=\frac{1}{2}\int_{x_i}^{x_j}\rho S\dot{v}^2\frac{dx}{L}$$\\
+$$E_c=\frac{1}{2}\int_{x_i}^{x_j}\rho S(\phi_i\dot{v_i}+\phi_j\dot{\theta_i}+\psi_i\dot{v_j}+\psi_j\dot{\theta_j})^2d\xi$$
+\end{center}
+
+Après les calcules on trouve la matrice $\widehat{M}$ :
+\[ \widehat{M}=\rho S\int_{x_i}^{x_j}\left[ \begin{array}{cccc}
+\phi_i^2 &\phi_i\psi_i& \phi_i\phi_j&\phi_i\psi_j     \\\\
+\psi_i\phi_i & \psi_i^2& \psi_i\phi_j&\psi_i\psi_j \\\\
+\phi_j\phi_i &\phi_j\psi_i& \phi_j^2&\phi_j\psi_j     \\\\
+\psi_j\phi_i &\psi_j\psi_i&\psi_j \phi_j&\psi_j^2    \\\\
+ \end{array} \right]dx\]
+
+\subsection{matrice de raideur}
+
+
+
+\section{N degré de Liberté}
+On prendre la matrice  de amortissment élémentaire  et la matrice de raideur élémentaire , ensuite on fait assemblage sur SCILAB :
+\subsection{matrice élémentaire de amortissement}
+\[ \widehat{\lambda}=\left[ \begin{array}{cccc}
+\lambda &0& -\lambda&0     \\\\
+0& \lambda_{\theta}&0&-\lambda_{\theta} \\\\
+-\lambda &0& \lambda&0    \\\\
+0&-\lambda_{\theta}&0&\lambda_{\theta}    \\\\
+ \end{array} \right]_{}\]
+
+\subsection{matrice élémentaire de raideur}
+\[ \widehat{K}=\left[ \begin{array}{cccc}
+K &0& -K&0     \\\\
+0 & K_{\theta}&0&-K_{\theta} \\\\
+-K &0& K&0     \\\\
+0&-K_{\theta}& 0&K_{\theta}   \\\\
+ \end{array} \right]_{v_i \, \theta_i \, v_j \, \theta_j \, } \]
+
+On cherche les deux matrices pour deux cas dans les deux extémités ou dans les conditions limites :
+
+\subsection{matrice dans la condition limite}
+
+
+
+
+\subsubsection{cas 1}
+............figure1..................................
+\[ \widehat{\lambda_1}=\left[ \begin{array}{cccc}
+0 &0& 0&0     \\\\
+0&0&0&-\lambda_{\theta} \\\\
+0&0& \lambda&0    \\\\
+0&-\lambda_{\theta}&0&0   \\\\
+ \end{array} \right]_{v_0 \, \theta_0 \, v_1 \, \theta_1 \, }
+ \,\,\,\,
+ \widehat{K_1}=\left[ \begin{array}{cccc}
+0 &0& 0&0     \\\\
+0&0&0&-K_{\theta} \\\\
+0&0& K&0    \\\\
+0&-K_{\theta}&0&0   \\\\
+ \end{array} \right]_{v_0 \, \theta_0 \, v_1 \, \theta_1 \, }\]
+ 
+  \[ \widehat{\lambda_n}=\left[ \begin{array}{cccc}
+\lambda &0& -\lambda&0     \\\\
+0&\lambda_{\theta}&0&0 \\\\
+-\lambda&0&\lambda&0    \\\\
+0&0&0&0   \\\\
+ \end{array} \right]_{v_{n-1} \, \theta_{n-1} \, v_{n} \, \theta_{n} \, }
+ \,\,\,\,
+ \widehat{K_n}=\left[ \begin{array}{cccc}
+K &0& -K&0     \\\\
+0&K_{\theta}&0&0 \\\\
+-K&0& K&0    \\\\
+0&0&0&0   \\\\
+ \end{array} \right]_{v_{n-1} \, \theta_{n-1} \, v_{n} \, \theta_{n} \, }\]
+ %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\subsubsection{cas 2 }
+............figure1..................................
+\[ \widehat{\lambda_1}=\left[ \begin{array}{cccc}
+0 &0& 0&0     \\\\
+0&0&0&-\lambda_{\theta} \\\\
+0&0& \lambda&0    \\\\
+0&-\lambda_{\theta}&0&0   \\\\
+ \end{array} \right]_{v_0 \, \theta_0 \, v_1 \, \theta_1 \, }
+ \,\,\,\,
+ \widehat{K_1}=\left[ \begin{array}{cccc}
+0 &0& 0&0     \\\\
+0&0&0&-K_{\theta} \\\\
+0&0& K&0    \\\\
+0&-K_{\theta}&0&0   \\\\
+ \end{array} \right]_{v_0 \, \theta_0 \, v_1 \, \theta_1 \, }\]
+ 
+  \[ \widehat{\lambda_n}=\left[ \begin{array}{cccc}
+\lambda &0& 0&0     \\\\
+0&0&0&-\lambda_{\theta} \\\\
+0&0& \lambda&0    \\\\
+0&-\lambda_{\theta}&0&0   \\\\
+ \end{array} \right]_{v_{n-1} \, \theta_{n-1} \, v_{n} \, \theta_{n} \, }
+ \,\,\,\,
+ \widehat{K_n}=\left[ \begin{array}{cccc}
+K &0& 0&0     \\\\
+0&0&0&-K_{\theta} \\\\
+0&0& 0&0    \\\\
+0&-K_{\theta}&0&0   \\\\
+ \end{array} \right]_{v_{n-1} \, \theta_{n-1} \, v_{n} \, \theta_{n} \, }\]
+
+
+ 
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%
+\chapter{Cas Antisymmétrie}
+\subsection{Équation d'Équilibre}
+
+Pour une poutre droite de section constante en flexion , et considérons un effort extérieur $t_{ext}$ nul , on a l'équation :
+\begin{equation}
+    \frac{\partial^2v}{\partial{t}^2}=-\frac{El}{\rho S}\frac{\partial^4{v}}{\partial{x}^4}
+	\label{equantion1}
+\end{equation}
+
+
+Posons : $v(x,t)$=$\phi(x)q(t)$ et reportons cette expression dans l'équation du mouvement :
+\begin{equation}
+	\phi\frac{d^2{q}}{d{t}^2}=-\frac{El}{\rho S}\frac{d^4{\phi}}{d{x}^4}q
+	\label{equantion2}
+\end{equation}
+
+
+\subsection{Séparations}
+Séparons les termes qui dépendent de $t$ et de $x$ :
+\begin{equation}
+    \frac{1}{q}\frac{d^2{q}}{d{t}^2}=-\frac{El}{\rho S}\frac{d^4{\phi}}{d{x}^4}\frac{1}{\phi}
+    \label{equantion3}
+\end{equation}
+
+%%%%%%%%%%%%%%===================%%%%%%%%%%%%%%%%%%%%%%%ù
+\section{Solution des fonctions}
+
+Les 2 membres de cette équation sont indépendants l'un de x , l'autre de t ; ils sont donc constants . Pour que la solution$q(t)$ reste bornée quand le temps tend vers l'infini , cette valeur constante doit être négative .
+\begin{center}
+Trouver $q(t)$ et $\phi(x)$ quand $-\omega^2$ est constant :
+	\begin{equation}
+		\frac{1}{q}\frac{d^2{q}}{d{t}^2}=-\frac{El}{\rho S}\frac{d^4{\phi}}{d{x}^4}\frac{1}{\phi}=-\omega^2
+		\label{equation4}
+	\end{equation}
+\end{center}
+
+
+\subsection{équation différentielles ordinaires}
+
+On en tire 2 équations différentielles ordinaires , l'une en $x$ , l'autre en $t$ , que l'on résout séparément :
+\begin{equation}
+	\left\{
+    \begin{array}{r c l }
+        \frac{d^4\phi}{dx^4}-\omega^4\frac{\rho S}{EI}\phi&=&0\\
+        \frac{d^2q}{dt^2}+\omega^2 q&=&0
+    \end{array}
+    \right.
+\end{equation}
+%%%%%=====================================%%%%%%%%%%%%%
+\subsection{recherche la solution}
+
+On recherche la solution de l'équation sous la forme harmitienne suivante :
+   $\phi (x)=ae^{sx}$ , d'où léquation caractéristique , de degré 4 en $S$ :
+
+\begin{equation}
+	s^4-\omega^4\frac{\rho S}{EI}=0
+	\label{equation5}
+\end{equation}
+
+qui a solutions :
+
+\begin{equation}
+    s=\pm \sqrt[4]{\frac{\rho S}{EI}{\omega^2}}\ ,\ s=\pm i\sqrt[4]{\frac{\rho S}{EI}{\omega^2}}
+    \label{equation6}
+\end{equation}
+
+que l'on peut aussi écrire en fonction d'unparamètre $\gamma$ sans dimension :
+
+\begin{equation}
+    s=\pm\frac{\gamma}{L}\ ,\ s=\pm i\frac{\gamma}{L}\ , \gamma=L\sqrt[4]{\frac{\rho S}{EI}{\omega^2}}
+    \label{equation7}
+\end{equation}
+
+
+On en déduit l'expression de la forme modale :
+
+\begin{equation}
+    \phi (x)=ae^{\gamma\frac{x}{L}}+be^{-\gamma\frac{x}{L}}+ce^{i\gamma\frac{x}{L}}+de^{-i\gamma\frac{x}{L}} 
+    \label{equation8}
+\end{equation}
+
+ou encore :
+
+
+\begin{equation}
+    \phi (x)=A\sinh{(\gamma\frac{x}{L})}+B\cosh{(\gamma\frac{x}{L})}+C\sin{(\gamma\frac{x}{L})}+D\cos{(\gamma\frac{x}{L})}
+    \label{equation9}
+\end{equation}
+
+On recherche l'autre solution de l'équation sous la forme harmitienne suivante : 
+$q(t)=ae^{bx}$ , d'où léquation caractéristique , de degré 2 en $t$ :
+
+\begin{equation}
+    b^2+\omega^2=0
+    \label{equation10}
+\end{equation}
+
+qui a 2 solutions :
+
+\begin{equation}
+    b=\pm i\omega\ , \ \omega=\frac{\gamma^2}{L^2}\sqrt{\frac{EI}{\rho S}}
+    \label{equation11}
+\end{equation}
+
+Donc on en déduit l'expression de la forme modale :
+
+\begin{equation}
+    q(t)=\hat{e}e^{i\omega t}+\hat{f}e^{-i\omega t}
+    \label{equation12}
+\end{equation}
+
+Ou encore :
+
+\begin{equation}
+    q(t)=E\sin{\omega t}+F\cos{\omega t}\ , \ \omega=\frac{\gamma^2}{L^2}\sqrt{\frac{EI}{\rho S}}
+    \label{equation13}
+\end{equation}
+
+
+\section{Solution finalement}
+On obtient donc finalement :
+\begin{equation}
+	v(x,t)=\phi (x)q(t)
+	\label{equation15}
+\end{equation}
+
+avec:
+
+
+\begin{equation}
+    \left\{
+    \begin{array}{r c l}
+        \phi(x)&=&A\sinh(\gamma\frac{x}{L})+B\cosh(\gamma\frac{x}{L})+C\sin(\gamma\frac{x}{L})+D\cos(\gamma\frac{x}{L})\\q(t)&=&E\sin{\omega t}+F\cos{\omega t}\\
+        \omega&=&\frac{\gamma^2}{L^2}\sqrt{\frac{EI}{\rho S}}
+    \end{array}
+    \right.
+\end{equation}
+
+
+\begin{itemize}
+
+
+    \item $\phi (x)$  définit la form de la poutre pendant sa vibration . Elle contient les 5 constantes $A, B, C$ et $\gamma (ou\ \omega)$ , qui sont fixées par les conditions aux limites .
+    
+    
+    
+    \item $q(t)$ définit le mouvement de la poutre . Elle contient , outre la constante $\omega$ déjà évoquée , les 2 constantes $E$ et $F$ , qui sont fixées par les conditions initiales .
+    
+    
+    
+\end{itemize}
+
+
+
+
+\subsection{extrémité en appui simple à l'abscisse x=0 et x=L}
+
+La flèche esy nulle en tout instant , ainsi que le moment fléchissant :
+
+\begin{equation}
+    \forall t\, 
+    \left\{
+    \begin{array}{r c l}v(L,t)&=&0\\\frac{\partial ^2v}{\partial x^2}(L,t)&=&0
+    \end{array}
+    \right.
+\end{equation}
+\begin{equation}
+    \forall t\,
+    \left \{
+    \begin{array}{r c l}v(0,t)&=&0\\\frac{\partial^2v}{\partial x^2}(0,t)&=&0
+    \end{array}
+    \right.
+\end{equation}
+
+Et on en déduit :
+
+\begin{equation}
+    \sin\gamma=0
+\end{equation}
+
+les 5 premieres pulsation pour deux extrémités appuis simples :
+$$\omega=\frac{\gamma^2}{L^2}\sqrt{\frac{EI}{\rho S}}$$
+
+
+
+
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\chapter{Conclution}
+
+
+Dans ce DM, nous avons étudié le modèle vibratoire de deux cas de sollicitations sur une même structure. Grâce à une étude statique, nous avons pu établir un modèle vibratoire de la structure et simuler son comportement avec des paramètres physiques et des conditions initiales différentes. Ce modèle a été trouvé en respectant les hypothèses de départ et en s'abstrayant de certains effets comme l'absence de cisaillement au niveau des liaisons, la négligence des masses des poutres verticales ainsi que la négligence de la compression dans le cas 1. N'oublions pas non plus que le bloc a été considéré comme indéformable ce qui ne peut être le cas dans la réalité.
+
+Nous avons pu constater que tant qu'on reste dans le domaine élastique de la structure, la réponse vibratoire dépendait du facteur d'amortissement, de la raideur, de la masse et de la sollicitation initiale. Ainsi, ce sont ces paramètres qu'il faut étudier et modifier si l'on veut changer les propriétés vibratoires de la structure.
+
+Pour conclure, nous pouvons dire que ce DM nous aura permis, en équipe, de mettre en pratique la théorie sur les modèles vibratoire dans le cas des vibrations libres amorties. Cette étude est restée dans un cadre simplifié avec des hypothèses qui reste applicable dans certains cas seulement. Il ne faut jamais perdre de l'oeil les hypothèses de départ qui nous ont permis de construire un modèle. 
+
+
+
+
+
+
+
+
+
+
+
+
+
+%\bibliography{MonBiblio.bib}
+%\bibliographystyle{unsrtnat}	
+\end{document}
+\grid

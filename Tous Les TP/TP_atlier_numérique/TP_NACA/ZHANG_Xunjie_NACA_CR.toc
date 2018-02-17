@@ -1,0 +1,17 @@
+\select@language {french}
+\select@language {french}
+\contentsline {chapter}{\numberline {1}Introduction}{3}{chapter.1}
+\contentsline {section}{\numberline {1.1}Introduction}{3}{section.1.1}
+\contentsline {section}{\numberline {1.2}Probl\IeC {\`e}m physique}{3}{section.1.2}
+\contentsline {chapter}{\numberline {2}Mod\IeC {\'e}lisation du probl\IeC {\`e}me }{4}{chapter.2}
+\contentsline {section}{\numberline {2.1}Theorique pour NACA sym\IeC {\'e}trique}{4}{section.2.1}
+\contentsline {section}{\numberline {2.2}\IeC {\'E}tude du profil NACA cambr\IeC {\'e}}{5}{section.2.2}
+\contentsline {section}{\numberline {2.3}R\IeC {\'e}sultal pour NACA cambr\IeC {\'e}}{6}{section.2.3}
+\contentsline {subsection}{\numberline {2.3.1}Isovaleur Potentiel}{6}{subsection.2.3.1}
+\contentsline {subsection}{\numberline {2.3.2}Pression d'une profile d'un $\alpha $}{7}{subsection.2.3.2}
+\contentsline {subsection}{\numberline {2.3.3}Potentiel de sonde des $\alpha $}{7}{subsection.2.3.3}
+\contentsline {subsection}{\numberline {2.3.4}Portance pour tous les $\alpha $}{7}{subsection.2.3.4}
+\contentsline {chapter}{\numberline {3}Trouvez le centre de portance avce PYTHON}{9}{chapter.3}
+\contentsline {section}{\numberline {3.1}\IeC {\'E}tude laminaire ,couche limite}{9}{section.3.1}
+\contentsline {section}{\numberline {3.2}Le centre de pouss\IeC {\'e}e}{10}{section.3.2}
+\contentsline {chapter}{\numberline {4}Conclusion}{12}{chapter.4}

@@ -1,0 +1,22 @@
+\BOOKMARK [1][-]{section.1.1}{Introduction}{}% 1
+\BOOKMARK [2][-]{subsection.1.1.1}{Objectif}{section.1.1}% 2
+\BOOKMARK [2][-]{subsection.1.1.2}{Probl\350me physique}{section.1.1}% 3
+\BOOKMARK [2][-]{subsection.1.1.3}{Th\351orie}{section.1.1}% 4
+\BOOKMARK [2][-]{subsection.1.1.4}{Approximation par \351l\351ment finis}{section.1.1}% 5
+\BOOKMARK [1][-]{section.1.2}{COMSOL}{}% 6
+\BOOKMARK [2][-]{subsection.1.2.1}{Etude de \351coulement}{section.1.2}% 7
+\BOOKMARK [2][-]{subsection.1.2.2}{Cr\351ation du domaine d'\351coulement}{section.1.2}% 8
+\BOOKMARK [2][-]{subsection.1.2.3}{Prise en compte des conditions limites}{section.1.2}% 9
+\BOOKMARK [2][-]{subsection.1.2.4}{Changement de maillage}{section.1.2}% 10
+\BOOKMARK [2][-]{subsection.1.2.5}{Cr\351ation d'un graphique iso-contours}{section.1.2}% 11
+\BOOKMARK [2][-]{subsection.1.2.6}{Cr\351ation d'un profil de vitesse}{section.1.2}% 12
+\BOOKMARK [2][-]{subsection.1.2.7}{Calcul d'une grandeur physique en un point}{section.1.2}% 13
+\BOOKMARK [2][-]{subsection.1.2.8}{Changement du type d'approximation}{section.1.2}% 14
+\BOOKMARK [1][-]{section.1.3}{R\351sultats}{}% 15
+\BOOKMARK [2][-]{subsection.1.3.1}{Maillage}{section.1.3}% 16
+\BOOKMARK [2][-]{subsection.1.3.2}{Fonction de courant}{section.1.3}% 17
+\BOOKMARK [2][-]{subsection.1.3.3}{Diff\351rence de pression}{section.1.3}% 18
+\BOOKMARK [2][-]{subsection.1.3.4}{Profie de vitesse u}{section.1.3}% 19
+\BOOKMARK [2][-]{subsection.1.3.5}{Profie de vitesse v}{section.1.3}% 20
+\BOOKMARK [2][-]{subsection.1.3.6}{Changement l'ordre d'\351l\351ment}{section.1.3}% 21
+\BOOKMARK [1][-]{section.1.4}{Conclusions}{}% 22

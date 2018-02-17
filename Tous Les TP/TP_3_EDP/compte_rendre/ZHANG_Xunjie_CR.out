@@ -1,0 +1,18 @@
+\BOOKMARK [0][-]{chapter.1}{Introduction}{}% 1
+\BOOKMARK [1][-]{section.1.1}{Probl\350me physique}{chapter.1}% 2
+\BOOKMARK [1][-]{section.1.2}{Modifisations des conditions limites}{chapter.1}% 3
+\BOOKMARK [0][-]{chapter.2}{Solution analytique }{}% 4
+\BOOKMARK [1][-]{section.2.1}{Solution analytique en 1D}{chapter.2}% 5
+\BOOKMARK [1][-]{section.2.2}{Solution pour t 2Lc0}{chapter.2}% 6
+\BOOKMARK [0][-]{chapter.3}{M\351thodes num\351rique}{}% 7
+\BOOKMARK [1][-]{section.3.1}{Stabilit\351}{chapter.3}% 8
+\BOOKMARK [1][-]{section.3.2}{Consistance}{chapter.3}% 9
+\BOOKMARK [1][-]{section.3.3}{Dispersion}{chapter.3}% 10
+\BOOKMARK [1][-]{section.3.4}{Conditions initials sous Matlab}{chapter.3}% 11
+\BOOKMARK [1][-]{section.3.5}{Programmer Matlab}{chapter.3}% 12
+\BOOKMARK [0][-]{chapter.4}{Etude num\351rique}{}% 13
+\BOOKMARK [1][-]{section.4.1}{Cas test}{chapter.4}% 14
+\BOOKMARK [1][-]{section.4.2}{Precision spatial}{chapter.4}% 15
+\BOOKMARK [1][-]{section.4.3}{Pr\351cision temporelle}{chapter.4}% 16
+\BOOKMARK [1][-]{section.4.4}{Nouvelle conditions \340 x=-L}{chapter.4}% 17
+\BOOKMARK [0][-]{chapter.5}{Conclusion}{}% 18

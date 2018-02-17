@@ -1,0 +1,15 @@
+On cherche la matrice de la raideur :
+L'énergie déformation :
+\begin{center}
+$$E_d=\frac{1}{2}\int_0^LEI\Big(\frac{\partial^2v}{\partial x^2}\Big)^2dx$$\\
+$$E_d=\frac{1}{2}\int_0^LEI\Big(v_0\frac{\partial^2\phi_0}{\partial x^2}+\theta_0\frac{\partial^2\phi_1}{\partial x^2}+v_1\frac{\partial^2\phi_2}{\partial x^2}+\theta_1\frac{\partial^3\phi_2}{\partial x^2}\Big)^2dx$$\\
+$$E_d=\frac{1}{2}[\,v_0\,\theta_0\,v_1 \,\theta_1 \, ]\,[K]\,[\,v_0\,\theta_0\,v_1 \,\theta_1 \,  ]^T$$
+\end{center}
+
+Après les calcules on trouve la matrice $\widehat{K}$ :
+\[ \widehat{K}=\frac{EI}{L^3}\left[ \begin{array}{cccc}
+12 &6L& -12&-6L     \\\\
+6L & 4L^2& -6L&-2 \\\\
+-12 &-6& 12&-6L     \\\\
+6L &2L^2& -6L&4L^2    \\\\
+ \end{array} \right]\]

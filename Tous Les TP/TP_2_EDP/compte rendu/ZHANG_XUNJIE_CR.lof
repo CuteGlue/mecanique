@@ -1,0 +1,14 @@
+\select@language {french}
+\select@language {french}
+\addvspace {10\p@ }
+\addvspace {10\p@ }
+\addvspace {10\p@ }
+\addvspace {10\p@ }
+\contentsline {figure}{\numberline {4.1}{\ignorespaces Solution exact \IeC {\`a} $t_0$ }}{10}{figure.4.1}
+\contentsline {figure}{\numberline {4.2}{\ignorespaces Solution exact et sch\IeC {\'e}me courant \IeC {\`a} $t_0$ pour $C_{FL}=0.1\tmspace +\thinmuskip {.1667em},1.0$}}{11}{figure.4.2}
+\contentsline {figure}{\numberline {4.3}{\ignorespaces Solution exact et sch\IeC {\'e}me laxwendroff \IeC {\`a} $t_0$ pour $C_{FL}=0.1\tmspace +\thinmuskip {.1667em},1.0$}}{12}{figure.4.3}
+\contentsline {figure}{\numberline {4.4}{\ignorespaces Solution exact et sch\IeC {\'e}me leapfrog \IeC {\`a} $t_0$ pour $C_{FL}=0.1\tmspace +\thinmuskip {.1667em},1.0$}}{12}{figure.4.4}
+\addvspace {10\p@ }
+\contentsline {figure}{\numberline {5.1}{\ignorespaces Error pour les trois sch\IeC {\'e}mes }}{13}{figure.5.1}
+\contentsline {figure}{\numberline {5.2}{\ignorespaces Precision temporelle pour trois scheme}}{14}{figure.5.2}
+\addvspace {10\p@ }

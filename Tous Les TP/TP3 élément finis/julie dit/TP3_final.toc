@@ -1,0 +1,50 @@
+\select@language {french}
+\select@language {french}
+\contentsline {section}{\numberline {1.1}Introduction}{4}{section.1.1}
+\contentsline {subsection}{\numberline {1.1.1}Objectif}{4}{subsection.1.1.1}
+\contentsline {subsection}{\numberline {1.1.2}Probl\IeC {\`e}me physique}{4}{subsection.1.1.2}
+\contentsline {subsection}{\numberline {1.1.3}Th\IeC {\'e}orie}{5}{subsection.1.1.3}
+\contentsline {subsection}{\numberline {1.1.4}Approximation par \IeC {\'e}l\IeC {\'e}ment finis}{8}{subsection.1.1.4}
+\contentsline {section}{\numberline {1.2}COMSOL}{9}{section.1.2}
+\contentsline {subsection}{\numberline {1.2.1}Etude de \IeC {\'e}coulement}{9}{subsection.1.2.1}
+\contentsline {subsection}{\numberline {1.2.2}Cr\IeC {\'e}ation du domaine d'\IeC {\'e}coulement}{10}{subsection.1.2.2}
+\contentsline {subsection}{\numberline {1.2.3}Prise en compte des conditions limites}{10}{subsection.1.2.3}
+\contentsline {subsection}{\numberline {1.2.4}Changement de maillage}{10}{subsection.1.2.4}
+\contentsline {subsection}{\numberline {1.2.5}Cr\IeC {\'e}ation d'un graphique iso-contours}{10}{subsection.1.2.5}
+\contentsline {subsection}{\numberline {1.2.6}Cr\IeC {\'e}ation d'un profil de vitesse}{11}{subsection.1.2.6}
+\contentsline {subsection}{\numberline {1.2.7}Calcul d'une grandeur physique en un point}{11}{subsection.1.2.7}
+\contentsline {subsection}{\numberline {1.2.8}Changement du type d'approximation}{11}{subsection.1.2.8}
+\contentsline {section}{\numberline {1.3}R\IeC {\'e}sultats}{11}{section.1.3}
+\contentsline {subsection}{\numberline {1.3.1}Maillage}{11}{subsection.1.3.1}
+\contentsline {subsubsection}{Maillage physique fin}{11}{section*.3}
+\contentsline {subsubsection}{Maillage physique extra fin}{12}{section*.4}
+\contentsline {subsubsection}{Maillage d\IeC {\'e}fini par taille d'\IeC {\'e}l\IeC {\'e} maxi hh avec segments}{13}{section*.5}
+\contentsline {subsubsection}{Maillage d\IeC {\'e}fini par distance maxi 5*hh}{13}{section*.6}
+\contentsline {subsection}{\numberline {1.3.2}Fonction de courant}{14}{subsection.1.3.2}
+\contentsline {subsubsection}{Profie de fonction de courant}{14}{section*.7}
+\contentsline {subsubsection}{isole profie de fonction de courant}{15}{section*.8}
+\contentsline {subsection}{\numberline {1.3.3}Diff\IeC {\'e}rence de pression}{16}{subsection.1.3.3}
+\contentsline {subsubsection}{Profie de diff\IeC {\'e}rence de pression}{16}{section*.9}
+\contentsline {subsubsection}{isole profie de diff\IeC {\'e}rence de pression}{17}{section*.10}
+\contentsline {subsubsection}{Diff\IeC {\'e}rence de pression dans le segements}{18}{section*.11}
+\contentsline {subsubsection}{Precisions diff\IeC {\'e}rence de pression dans le segements}{19}{section*.12}
+\contentsline {subsubsection}{Detail pression dans le segments}{20}{section*.13}
+\contentsline {subsubsection}{Diff\IeC {\'e}rence de pression ponctuel}{21}{section*.14}
+\contentsline {subsection}{\numberline {1.3.4}Profie de vitesse u}{22}{subsection.1.3.4}
+\contentsline {subsubsection}{Profie de vitesse surface}{22}{section*.15}
+\contentsline {subsubsection}{isole profie de vitesse horizontale surface}{23}{section*.16}
+\contentsline {subsubsection}{Profie de vitesse horizontale sur les segements }{24}{section*.17}
+\contentsline {subsubsection}{Pr\IeC {\'e}cisions profie de vitesse horizontale sur les segements }{25}{section*.18}
+\contentsline {subsubsection}{Detail de vitesse horizontale sur les segments }{26}{section*.19}
+\contentsline {subsubsection}{Vitesse horizontale ponctuel }{27}{section*.20}
+\contentsline {subsection}{\numberline {1.3.5}Profie de vitesse v}{28}{subsection.1.3.5}
+\contentsline {subsubsection}{Profie de vitesse verticale surface}{29}{section*.21}
+\contentsline {subsubsection}{Profie de vitesse verticale sur les segements }{30}{section*.22}
+\contentsline {subsubsection}{Pr\IeC {\'e}cisions profie de vitesse verticale sur les segements }{31}{section*.23}
+\contentsline {subsubsection}{Detail de vitesse verticale sur les segments }{32}{section*.24}
+\contentsline {subsubsection}{Vitesse verticale ponctuel }{33}{section*.25}
+\contentsline {subsection}{\numberline {1.3.6}Changement l'ordre d'\IeC {\'e}l\IeC {\'e}ment}{34}{subsection.1.3.6}
+\contentsline {subsubsection}{P1}{34}{section*.26}
+\contentsline {subsubsection}{P2}{36}{section*.27}
+\contentsline {subsubsection}{P3}{38}{section*.28}
+\contentsline {section}{\numberline {1.4}Conclusions}{40}{section.1.4}

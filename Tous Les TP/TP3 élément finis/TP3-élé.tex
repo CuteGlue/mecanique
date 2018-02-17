@@ -1,0 +1,133 @@
+%% ceci est un commentaire 
+%% il faut toujours commencer par \documentclass[type de papier, taille de texte]{sytle du document}
+\documentclass[a4paper,10pt]{report} %%%% sytle du document : report/book/article
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%% la suite est une collection des "package" ou des "librararies" pour utiliser des codes spécifiques
+%% il vous suffit de les copie-coller quand vous créez un nouveau document TeX (ou bien en ajouter plus si besoin).
+\usepackage[utf8]{inputenc} %% pour les accents en français
+\usepackage[frenchb]{babel} %% pour un format français
+\usepackage{graphicx} %% pour afficher des graphiques
+\usepackage{amsmath} %% pour écrire des symboles (maths), des équations, etc.
+\usepackage{amssymb}
+\usepackage{color}
+\usepackage{bm} %% pour lister des citations/la biblio
+\usepackage{hyperref} %% pour inserer des liens internet
+\usepackage{cleveref} %% pour faire des références uax équations, tableaux, etc.
+\usepackage{cite}
+\usepackage{float}
+%\usepackage{setspace} %% pour changer l'espace entre les lignes
+%\linespread{1.6} %% pour changer l'espace entre les lignes
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Default fixed font does not support bold face
+\DeclareFixedFont{\ttb}{T1}{txtt}{bx}{n}{8} % for bold
+\DeclareFixedFont{\ttm}{T1}{txtt}{m}{n}{8}  % for normal
+
+% Custom colors
+\usepackage{color}
+\definecolor{deepblue}{rgb}{0,0,0.5}
+\definecolor{deepred}{rgb}{0.6,0,0}
+\definecolor{deepgreen}{rgb}{0,0.5,0}
+
+\usepackage{listings}
+% Python style for highlighting
+\newcommand\pythonstyle{\lstset{
+language=Python,
+breaklines=true,
+basicstyle=\ttm,
+otherkeywords={self},             % Add keywords here
+keywordstyle=\ttb\color{deepblue},
+emph={MyClass,__init__},          % Custom highlighting
+emphstyle=\ttb\color{deepred},    % Custom highlighting style
+stringstyle=\color{deepgreen},
+frame=tb,                         % Any extra options here
+showstringspaces=false 
+           % 
+}}
+% Python environment
+\lstnewenvironment{python}[1][]
+{
+\pythonstyle
+\lstset{#1}
+}
+{}
+% Python for external files
+\newcommand\pythonexternal[2][]{{
+\pythonstyle
+\lstinputlisting[#1]{#2}}}
+% Python for inline
+\newcommand\pythoninline[1]{{\pythonstyle\lstinline!#1!}}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\title{\textbf{Ecoulement potentiel 2D}} %% choissez un titre approprié à votre sujet
+\author{par\\CISCARD Julie\\ZHANG Xunjie\\pour le DM de l'UE éléments finis M1} %% utilisez \\ pour une nouvelle ligne
+\date{fait le 29 novembre 2016} %% pour afficher la date actuelle commenter cette ligne
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%TOUT ce qui va dans votre rapport doit être entre \begin{document} & \end{document}
+\begin{document}
+\selectlanguage{french} %% format français
+\maketitle %% pour afficher le titre
+\tableofcontents %% pour afficher/compiler le sommaire automatiquement
+\listoffigures %% pour lister les figures
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\chapter{Introduction}
+
+\section{Problème physique}
+
+\section{Objectif}
+
+On pend cette séance pour :
+
+\begin{itemize}
+    \item[$\bullet$]d'utiliser la méthode des éléments finis pour des problèmes physiques demension ; nous calculons ainsi l'écoulement potentiel autour d'un canal \textbf{2D} .
+    \item[$\bullet$]d'apprendre à travailler avec le logiciel \textbf{COMSOL} 
+\end{itemize}
+\section{Théorie}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\chapter{COMSOL}
+.....quelque chose
+.....
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\chapter{Résultats}
+résultat graphiques avecs titres , explications , petites conclusions.
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\chapter{Conclutions}
+
+
+Dans ce séance de TP , nous avons étudié le modèle vibratoire d'une membrane . Grâce à une étude statique, nous avons pu établir un modèle vibratoire de la structure et simuler son comportement avec des paramètres physiques et des conditions initiales différentes.\\
+
+
+Nous avons trouvé que quand on augement le degré du polynôme d'approximation , la solution $u^h$ est plus proche que solution exact $u_e$ .
+Dans le cas $1$ , on trouve quand le degré est $5$ ,  la solution approximation est presque pareille que la solution exact .\\
+
+Pour différent charges extérieursur la membrane , on  touver différent solutions approximations . \\
+
+Pour conclure, nous pouvons dire que ce TP nous aura permis, en équipe, de mettre en pratique la théorie sur les modèles vibratoire et l'élement finis .  N'oublions pas non plus que la membrane a été considéré comme indéformable ce qui ne peut être le cas dans la réalité.
+
+
+
+
+
+
+
+
+
+%\bibliography{MonBiblio.bib}
+%\bibliographystyle{unsrtnat}	
+\end{document}
+\grid

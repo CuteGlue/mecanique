@@ -1,0 +1,18 @@
+\begin{thebibliography}{2}
+\providecommand{\natexlab}[1]{#1}
+\providecommand{\url}[1]{\texttt{#1}}
+\expandafter\ifx\csname urlstyle\endcsname\relax
+  \providecommand{\doi}[1]{doi: #1}\else
+  \providecommand{\doi}{doi: \begingroup \urlstyle{rm}\Url}\fi
+
+\bibitem[Auteur1 and co~auteur2(1871)]{Auteur1_Livre}
+co-auteur1 Auteur1 and co~auteur2.
+\newblock \emph{titre de l'ouvrage/du livre}.
+\newblock Blah-Blah Publisher, 1871.
+
+\bibitem[Auteur1 and Co-Auteur(2016)]{Auteur_ArticleSci}
+Auteur1 and Co-Auteur.
+\newblock Titre de l'article.
+\newblock \emph{Journal of Blah-Blah}, 724:\penalty0 527--552, 2016.
+
+\end{thebibliography}
