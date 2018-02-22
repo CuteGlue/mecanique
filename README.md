@@ -1,2 +1,2 @@
 # Parcour Mécanique modélisation application mécanique 
-Ici, dans cette mémoire, j'ai importé quelques sujets et tps .
+Ici, dans cette mémoire, j'ai importé quelques sujets, relévés des notes, TPs et d'autre choses.
